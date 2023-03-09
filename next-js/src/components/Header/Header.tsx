@@ -1,5 +1,6 @@
 import { AppBar, IconButton, Toolbar } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import SearchInput from "../SearchInput/SearchInput";
 
 export default function Header() {
   return (
@@ -8,6 +9,7 @@ export default function Header() {
         <IconButton>
           <MenuIcon />
         </IconButton>
+        <SearchInput />
       </Toolbar>
     </AppBar>
   );
