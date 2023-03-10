@@ -7,20 +7,20 @@ import { getTitle } from "../../store/title/title.slice";
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  backgroundColor: alpha(theme.palette.common.black, 0.15),
   "&:hover": {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
+    backgroundColor: alpha(theme.palette.common.black, 0.25),
   },
   marginLeft: 0,
-  width: "100%",
+  width: "50%",
   [theme.breakpoints.up("sm")]: {
-    marginLeft: theme.spacing(1),
+    marginLeft: theme.spacing(6),
     width: "auto",
   },
 }));
 
 const SearchIconBtn = styled(IconButton)(({ theme }) => ({
-  padding: theme.spacing(0, 1),
+  padding: theme.spacing(0, 2),
   height: "100%",
   position: "absolute",
   display: "flex",
@@ -36,11 +36,11 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create("width"),
-    width: "100%",
+    width: "50%",
     [theme.breakpoints.up("sm")]: {
-      width: "12ch",
+      width: "6ch",
       "&:focus": {
-        width: "20ch",
+        width: "10ch",
       },
     },
   },
@@ -64,6 +64,7 @@ export default function SearchInput() {
       <StyledInputBase
         placeholder="Search…"
         inputProps={{ "aria-label": "search" }}
+        
         onChange={handleTitle}
       />
     </Search>
